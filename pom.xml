@@ -161,6 +161,20 @@
       </plugins>
     </pluginManagement>
   </build>
+  <distributionManagement>	
+	<repository>
+		<id>nexus</id>
+		<name>My Nexus Repository</name>
+		<url>http://172.16.16.100:8081/repository/test-release/</url>
+	</repository>
+			
+	<snapshotRepository>
+		<id>nexus</id>
+		<name>My Nexus Repository</name>
+		<url>http://172.16.16.100:8081/repository/test-snapshot/</url>
+	</snapshotRepository>
+</distributionManagement>
+
 
   <dependencyManagement>
     <dependencies>
