@@ -69,12 +69,26 @@
             <plugin>
               <artifactId>maven-surefire-report-plugin</artifactId>
             </plugin>
+            <distributionManagement>
+		
+	<repository>
+		<id>nexus</id>
+		<name>My Nexus Repository</name>
+		<url>http://172.16.16.100:8081/repository/test-release/</url>
+	</repository>
+			
+	<snapshotRepository>
+		<id>nexus</id>
+		<name>My Nexus Repository</name>
+		<url>http://172.16.16.100:8081/repository/test-snapshot/</url>
+	</snapshotRepository>
+</distributionManagement>
 
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>findbugs-maven-plugin</artifactId>
             </plugin>
-
+          
             <plugin>
               <groupId>org.codehaus.mojo</groupId>
               <artifactId>taglist-maven-plugin</artifactId>
